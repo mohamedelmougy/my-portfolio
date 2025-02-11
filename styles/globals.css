@@ -64,7 +64,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  .container {
+  .container-section {
     @apply px-5 my-2;
   }
 }

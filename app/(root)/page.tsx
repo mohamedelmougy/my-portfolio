@@ -1,15 +1,21 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import VideoBackground from "@/components/VideoBackground";
+import TechnicalSkills from "@/components/TechnicalSkills";
 
 const Home = () => {
   return (
-    <section className="h-[200vh]">
-      <VideoBackground />
-      <Navbar />
+    <>
+      <section>
+        <VideoBackground />
+        <Navbar />
 
-      <Hero />
-    </section>
+        <Hero />
+      </section>
+      <section >
+        <TechnicalSkills />
+      </section>
+    </>
   );
 };
 

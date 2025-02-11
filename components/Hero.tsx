@@ -4,7 +4,7 @@ import AboutSection from "./AboutSection";
 
 const Hero = () => {
   return (
-    <div className="container">
+    <div className="container-section">
       <div className="flex gap-3 flex-col lg:flex-row ">
         <Card />
 
