@@ -5,11 +5,10 @@ import MeteorDemo from "./animations/MeteorsEffect";
 const AboutSection = () => {
   return (
     <>
-
       <MeteorDemo>
         <div className="bg-white dark:bg-primary-black flex-[2] p-3 rounded-[32px] px-8 py-16 lg:h-[85vh] z-[100]">
           <div className="text-2xl tracking-tight">
-            <span>Hello, I&apos;m </span>
+            <span>Hello, I&apos;m{"  "}</span>
             <div className="inline-block">
               <div className="flex items-center justify-center mt-10 text-primary-green">
                 <TextRotate
