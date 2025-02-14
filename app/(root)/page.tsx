@@ -12,7 +12,7 @@ const Home = () => {
 
         <Hero />
       </section>
-      <section >
+      <section>
         <TechnicalSkills />
       </section>
     </>

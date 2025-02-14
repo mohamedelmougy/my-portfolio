@@ -26,7 +26,7 @@ const Navbar = () => {
             {navBarLinks.map((link) => {
               const isActive = `#${hash}` === `${link.route}`;
               return (
-                <Link
+                <a
                   key={link.label}
                   className={cn(
                     "hover:bg-primary-green font-semibold text-black dark:text-white px-4 py-2 rounded-full text-xl",
@@ -41,7 +41,7 @@ const Navbar = () => {
                     alt="icon"
                   /> */}
                   {link.label}
-                </Link>
+                </a>
               );
             })}
           </nav>
