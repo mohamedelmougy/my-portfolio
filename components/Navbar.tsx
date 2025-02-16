@@ -16,7 +16,7 @@ const Navbar = () => {
     return null;
   }
   return (
-    <header className="sticky top-0 bg-white dark:bg-primary-black ">
+    <header className="fixed top-0 bg-white dark:bg-primary-black z-[1000] w-full">
       <div className="px-5 mx-2">
         <div className="flex justify-between items-center">
           <div>

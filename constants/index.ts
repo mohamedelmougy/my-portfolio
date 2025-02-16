@@ -115,3 +115,73 @@ export const cardTechnologyDetails = [
     percentage: 80,
   },
 ];
+
+export const projectsCategories = [
+  {
+    title: "Sql",
+    slug: "sql",
+    projects: [
+      {
+        title: "Automation System Production",
+        image: "/assets/images/p4.jpg",
+        tech: ["SQL", "Mongodb", "prisma"],
+        github: "#",
+        previewLink: "#",
+      },
+    ],
+  },
+  {
+    title: "AWS",
+    slug: "aws",
+    projects: [
+      {
+        title: "Image Caption Generation",
+        image: "/assets/images/p2.jpg",
+        tech: ["AWS"],
+        github: "#",
+        previewLink: "#",
+      },
+    ],
+  },
+  {
+    title: "Python",
+    slug: "python",
+    projects: [
+      {
+        title: "The App Market on Google Play",
+        image: "/assets/images/p1.jpg",
+        tech: ["python"],
+        github: "#",
+        previewLink: "#",
+      },
+      {
+        title: "Analytics Dashboard Software",
+        image: "/assets/images/p3.jpg",
+        tech: ["python"],
+        github: "#",
+        previewLink: "#",
+      },
+      {
+        title: "TechNexts Data Analysis",
+        image: "/assets/images/p4.jpg",
+        tech: ["python"],
+        github: "#",
+        previewLink: "#",
+      },
+    ],
+  },
+  {
+    title: "Azure",
+    slug: "azure",
+    projects: [
+      {
+        title: "Investment Mobile Application",
+        image: "/assets/images/p6.jpg",
+        tech: ["azure"],
+        github: "#",
+        previewLink: "#",
+      },
+
+    ],
+  },
+];
