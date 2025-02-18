@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import SectionSubHeader from "./SectionSubHeader";
 import SectionHeader from "./SectionHeader";
 import { Dumbbell } from "lucide-react";
 import ProjectCard from "./ProjectCard";
-import { projectsCategories } from "@/constants";
+import { projectsDetails } from "@/constants";
+import { cn } from "@/lib/utils";
 
 const ProjectsSection = () => {
+  const [itemsData, setItemsData] = useState(projectsDetails);
+  const [selectedTech, setSelectedTech] = useState("All"); 
+
+  const allTech = projectsDetails.flatMap((item) => item.tech);
+  const removeDuplicatedName = ["All", ...new Set(allTech)];
+
+  const filterByTech = (tech: string) => {
+    if (tech === "All") {
+      setItemsData(projectsDetails);
+    } else {
+      const newArr = projectsDetails.filter((project) =>
+        project.tech.includes(tech)
+      );
+      setItemsData(newArr);
+    }
+  };
+  const handleClick = (tech: string) => {
+    setSelectedTech(tech); 
+    filterByTech(tech);
+  };
+
   return (
     <div className="container-section" id="project">
       <div className="bg-white dark:bg-primary-black p-3 rounded-[32px] px-8 py-16">
@@ -13,23 +36,30 @@ const ProjectsSection = () => {
         <SectionHeader title="Explore Portfolio By Technology" />
         <div className="">
           <div className="flex gap-4 mt-8 flex-wrap justify-center">
-            <button className="py-2 px-4 bg-primary-green rounded-full dark:text-black">
-              All
-            </button>
-            {projectsCategories.map((item) => (
-              <button className="py-2 px-4 bg-primary-green rounded-full dark:text-black uppercase">
-                {item.title}
-              </button>
-            ))}
+            {removeDuplicatedName.map((tech) => {
+               const isActive = tech === selectedTech
+               console.log("🚀 ~ {removeDuplicatedName.map ~ isActive:", isActive)
+              return (
+                <button
+                  key={tech}
+                  className={cn(
+                    "py-2 px-4 border-2 border-primary-green rounded-full dark:text-black dark:text-white uppercase",
+                   { "bg-primary-green":isActive}
+                  )}
+                  onClick={() => handleClick(tech)}
+                >
+                  {tech}
+                </button>
+              );
+            })}
           </div>
 
- 
-          <div className="flex flex-wrap items-center justify-center">
-            {projectsCategories.map((item) => (
+          <div className="flex flex-wrap gap-3 items-center justify-center">
+            {itemsData.map((item) => (
               <ProjectCard
-                key={item.slug}
-                imageURL={item.projects[0].image}
-                title={item.projects[0].title}
+                key={item.title}
+                imageURL={item.image}
+                title={item.title}
               />
             ))}
           </div>
