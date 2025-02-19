@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const ProjectsSection = () => {
   const [itemsData, setItemsData] = useState(projectsDetails);
-  const [selectedTech, setSelectedTech] = useState("All"); 
+  const [selectedTech, setSelectedTech] = useState("All");
 
   const allTech = projectsDetails.flatMap((item) => item.tech);
   const removeDuplicatedName = ["All", ...new Set(allTech)];
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
     }
   };
   const handleClick = (tech: string) => {
-    setSelectedTech(tech); 
+    setSelectedTech(tech);
     filterByTech(tech);
   };
 
@@ -37,14 +37,13 @@ const ProjectsSection = () => {
         <div className="">
           <div className="flex gap-4 mt-8 flex-wrap justify-center">
             {removeDuplicatedName.map((tech) => {
-               const isActive = tech === selectedTech
-               console.log("🚀 ~ {removeDuplicatedName.map ~ isActive:", isActive)
+              const isActive = tech === selectedTech;
               return (
                 <button
                   key={tech}
                   className={cn(
                     "py-2 px-4 border-2 border-primary-green rounded-full dark:text-black dark:text-white uppercase",
-                   { "bg-primary-green":isActive}
+                    { "bg-primary-green": isActive }
                   )}
                   onClick={() => handleClick(tech)}
                 >
