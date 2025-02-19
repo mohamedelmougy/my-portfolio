@@ -59,6 +59,8 @@ const ProjectsSection = () => {
                 key={item.title}
                 imageURL={item.image}
                 title={item.title}
+                githubLink={item.github}
+                previewLink={item.previewLink}
               />
             ))}
           </div>

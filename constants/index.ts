@@ -121,8 +121,8 @@ export const projectsDetails = [
     title: "Investment Mobile Application",
     image: "/assets/images/p6.jpg",
     tech: ["azure"],
-    github: "#",
-    previewLink: "#",
+    github: "https://github.com/mohamedelmougy/Nextjs-Contentlayer-blog",
+    previewLink: "https://nextjs-contentlayer-blog-ivory.vercel.app",
   },
   {
     title: "The App Market on Google Play",
